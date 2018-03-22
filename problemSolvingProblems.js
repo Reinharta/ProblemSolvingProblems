@@ -56,27 +56,41 @@
 
 /*#4*/
 
+// function stringInput (str) {
+//     let string= prompt("Enter Text Here");
+//     return string;
+// }
+
+// function stringCompression (str) {
+//   if (str.length ==0) {
+//     console.log('Please enter stuff.');
+//     return;
+//   }
+//   let output = '';
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     count++;
+//     if (str[i] != str[i+1]) {
+//       output += count + str[i];
+//       count = 0;
+    
+//     }
+//   }
+//   return output
+// }
+// console.log(stringCompression(stringInput()));
+
+
+/*#5*/
 
 function stringInput (str) {
     let string= prompt("Enter Text Here");
     return string;
 }
-
-function stringCompression (str) {
-  if (str.length ==0) {
-    console.log('Please enter stuff.');
-    return;
-  }
-  let output = '';
-  let count = 0;
-  for (let i = 0; i < str.length; i++) {
-    count++;
-    if (str[i] != str[i+1]) {
-      output += count + str[i];
-      count = 0;
-    
-    }
-  }
-  return output
+function palindrome (str) {
+    let newString= /[\W_]/g;
+    let lowerStr= str.toLowerCase().replace(newString,"");
+    let reverseStr= lowerStr.split("").reverse().join("");
+    return reverseStr === lowerStr;
 }
-console.log(stringCompression(stringInput()));
+console.log(palindrome(stringInput()))
