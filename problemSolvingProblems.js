@@ -83,14 +83,34 @@
 
 /*#5*/
 
-function stringInput (str) {
-    let string= prompt("Enter Text Here");
-    return string;
+// function stringInput (str) {
+//     let string= prompt("Enter Text Here");
+//     return string;
+// }
+// function palindrome (str) {
+//     let newString= /[\W_]/g;
+//     let lowerStr= str.toLowerCase().replace(newString,"");
+//     let reverseStr= lowerStr.split("").reverse().join("");
+//     return reverseStr === lowerStr;
+// }
+// console.log(palindrome(stringInput()))
+
+
+/*#6*/
+
+
+function digitsSquared (number) {
+    let example= 404;
+    let digit= example.toString(10).split("");
+    let square= Math.pow(digit, 2);
+    return square;
 }
-function palindrome (str) {
-    let newString= /[\W_]/g;
-    let lowerStr= str.toLowerCase().replace(newString,"");
-    let reverseStr= lowerStr.split("").reverse().join("");
-    return reverseStr === lowerStr;
-}
-console.log(palindrome(stringInput()))
+// function squaresAdded (square) {
+//     let sum= 
+// }
+
+console.log(digitsSquared())
+
+
+
+////return string to numbers, add loop, and shit////
