@@ -1,7 +1,7 @@
 "use strict";
-function displayResult (result) {
-     return console.log(result);
- }
+// function displayResult (result) {
+//      return console.log(result);
+//  }
 
 /* #1 */
 // function fizzbuzz () {
@@ -39,16 +39,44 @@ function displayResult (result) {
 
 
 /*#3*/
-function makeLowCaseOnSpace(text){
-    let workingString = text.toLowerCase().split(' ');
-    return workingString;
-}
-function captilzeFirstLetter(workingString){
+// function makeLowCaseOnSpace(text){
+//     let workingString = text.toLowerCase().split(' ');
+//     return workingString;
+// }
+// function captilzeFirstLetter(workingString){
     
-    for(let idx = 0; idx < workingString.length; idx++){
-        workingString[idx] = workingString[idx].charAt(0).toUpperCase() + workingString[idx].substring(1);
-    }
-    return workingString.join(' ');
+//     for(let idx = 0; idx < workingString.length; idx++){
+//         workingString[idx] = workingString[idx].charAt(0).toUpperCase() + workingString[idx].substring(1);
+//     }
+//     return workingString.join(' ');
+// }
+
+// displayResult(captilzeFirstLetter(makeLowCaseOnSpace("hello i am learning.")))
+
+
+/*#4*/
+
+
+function stringInput (str) {
+    let string= prompt("Enter Text Here");
+    return string;
 }
 
-displayResult(captilzeFirstLetter(makeLowCaseOnSpace("hello i am learning.")))
+function stringCompression (str) {
+  if (str.length ==0) {
+    console.log('Please enter stuff.');
+    return;
+  }
+  let output = '';
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    count++;
+    if (str[i] != str[i+1]) {
+      output += count + str[i];
+      count = 0;
+    
+    }
+  }
+  return output
+}
+console.log(stringCompression(stringInput()));
