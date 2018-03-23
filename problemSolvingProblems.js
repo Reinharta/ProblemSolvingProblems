@@ -98,19 +98,53 @@
 
 /*#6*/
 
-
-function digitsSquared (number) {
-    let example= 404;
-    let digit= example.toString(10).split("");
-    let square= Math.pow(digit, 2);
-    return square;
+function happy (number) {
+  let array= [number];
+  let newNumber= 0;
+  let strNum= number.toString().split("");
+  for (let i = 0; ;i++) {
+    array[i]= parseInt(strNum[i]);
+    newNumber += Math.pow(array[i], 2);
+    }
+  return newNumber
 }
-// function squaresAdded (square) {
-//     let sum= 
+  
+////for loop conditional statement (length) screwed up from beginning by stopping too soon, without it it ran one extra loop ending with NaN////
+
+console.log(happy(998))
+
+
+// if (sum=== 4||16||37||58||89||145||42||20) {
+//   return false;
+// }
+// else {
+//   return true;
+// }
+// for (var i = Things.length - 1; i >= 0; i--) {
+//   Things[i]
+// }
+// for (var i = 0; i < Things.length; i++) {
+//   Things[i]
 // }
 
-console.log(digitsSquared())
+// function digitsSplit (number) {
+//     let example= 404;
+//     let spltNum= example.toString(10).split("");
+//     let digit= 
+// }
+// function digitsSquared (number) {
+//     let square= Math.pow(digit, 2);
+// }
+// function squaresAdded (square) {
+// //     let sum= 
+// // }
+//     let sum= squaresAdded
+//     return square;
+// }
+// function 
+ 
+
+// console.log(digitsSquared())
 
 
 
-////return string to numbers, add loop, and shit////
