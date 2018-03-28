@@ -1,7 +1,7 @@
 "use strict";
-// function displayResult (result) {
-//      return console.log(result);
-//  }
+/*function displayResult (result) {
+     return console.log(result);
+ }*/
 
 /* #1 */
 // function fizzbuzz () {
@@ -98,53 +98,76 @@
 
 /*#6*/
 
+
+// function happy (number) {
+//   let array= [number];
+//   let newNumber= 0;
+//   let strNum= number.toString().split("");
+//   for (let i = 0; i<=strNum.length-1; i++) {
+//     array[i]= parseInt(strNum[i]);
+//     newNumber += Math.pow(array[i], 2);
+//     }
+//   return newNumber
+//   if (newNumber===1){
+//     console.log("Happy")
+//   }
+//   else {
+//     for (let i = 0; i<=strNum.length-1; i++) {
+//     array[i]= parseInt(strNum[i]);
+//     newNumber += Math.pow(array[i], 2);
+//     }
+//   return newNumber
+//   }
+// }
+
+
+
+
+
+
+
+console.log(happy(14))
+
 function happy (number) {
-  let array= [number];
+  let i=0;
   let newNumber= 0;
-  let strNum= number.toString().split("");
-  for (let i = 0; ;i++) {
+
+  let array= [number];
+   
+  while (i<=array.length) {
+    let strNum= number.toString().split("");
     array[i]= parseInt(strNum[i]);
     newNumber += Math.pow(array[i], 2);
-    }
-  return newNumber
+    i++;
+        if (i>strNum.length) {
+          let sum= newNumber
+              if (sum===1||sum===4) {
+                return sum;
+              }
+              else {
+                let strNum=newNumber.toString().split("");
+                continue;
+              }
+        }
+        else {
+          continue;
+        }
+  } 
 }
-  
-////for loop conditional statement (length) screwed up from beginning by stopping too soon, without it it ran one extra loop ending with NaN////
-
-console.log(happy(998))
+//** task: re-run loop with new sum -- not doing that shit
 
 
-// if (sum=== 4||16||37||58||89||145||42||20) {
-//   return false;
+// function results (number) {
+// if (number === 1 ) {
+//   console.log("Super Happy!");
 // }
+// if (number)
 // else {
-//   return true;
+//   console.log(Happy);
 // }
-// for (var i = Things.length - 1; i >= 0; i--) {
-//   Things[i]
-// }
-// for (var i = 0; i < Things.length; i++) {
-//   Things[i]
 // }
 
-// function digitsSplit (number) {
-//     let example= 404;
-//     let spltNum= example.toString(10).split("");
-//     let digit= 
-// }
-// function digitsSquared (number) {
-//     let square= Math.pow(digit, 2);
-// }
-// function squaresAdded (square) {
-// //     let sum= 
-// // }
-//     let sum= squaresAdded
-//     return square;
-// }
-// function 
- 
 
-// console.log(digitsSquared())
-
-
-
+// function displayResult (number) {
+//      return (number);
+//  }
