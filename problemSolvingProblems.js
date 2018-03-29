@@ -126,35 +126,39 @@
 
 
 
-console.log(happy(14))
+// console.log(happy(44))
 
-function happy (number) {
-  let i=0;
-  let newNumber= 0;
+// function happy (number) {
+//   let i=0;
+//   let newNumber= 0;
 
-  let array= [number];
-   
-  while (i<=array.length) {
-    let strNum= number.toString().split("");
-    array[i]= parseInt(strNum[i]);
-    newNumber += Math.pow(array[i], 2);
-    i++;
-        if (i>strNum.length) {
-          let sum= newNumber
-              if (sum===1||sum===4) {
-                return sum;
-              }
-              else {
-                let strNum=newNumber.toString().split("");
-                continue;
-              }
-        }
-        else {
-          continue;
-        }
-  } 
-}
-//** task: re-run loop with new sum -- not doing that shit
+//   let array= [number];
+//   array= number.toString().split(""); 
+//   while (number!=1 && i<=array.length) {
+ 
+//     // array[i]= parseInt(strNum[i]);
+//     newNumber += Math.pow(array[i], 2);
+    
+//         if (i===strNum.length-1) {
+//           let sum= newNumber
+//               if (sum===1||sum===4) {
+//                 return sum;
+//               }
+//               else {
+//                 let strNum=newNumber.toString().split("");
+//                 continue;
+//               }
+//         }
+//         else {
+//           i++;
+//           continue;
+//         }
+//   } 
+//   if (number===1) {
+//     return "happy!"
+//   }
+// }
+// //** task: re-run loop with new sum -- not doing that shit
 
 
 // function results (number) {
@@ -171,3 +175,31 @@ function happy (number) {
 // function displayResult (number) {
 //      return (number);
 //  }
+
+
+
+
+
+
+// good shit
+
+function happy (number) {
+  let newNumber= 0;
+  let array= [number];
+  array= number.toString().split("");
+  for (let i = 0; i < array.length; i++) {
+    // let strNum= number.toString().split("");
+    // array[i]= parseInt(strNum[i]);
+    newNumber += Math.pow(array[i], 2);
+  }
+  if (newNumber === 1) {
+    return "Happy"
+  }
+  else {
+    if (newNumber === 4 || newNumber === 29) {
+      return "Sad"
+    }
+    return happy(newNumber);
+  }
+}
+console.log(happy(942))
